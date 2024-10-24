@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>So sánh 2 tham số</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+
+        .btn {
+            background-color: #4CAF50; /* Màu nền */
+            border: none; /* Xóa viền */
+            color: white; /* Màu chữ */
+            padding: 15px 32px; /* Khoảng cách bên trong */
+            text-align: center; /* Căn giữa chữ */
+            text-decoration: none; /* Xóa gạch chân */
+            display: inline-block; /* Định dạng kiểu khối */
+            font-size: 16px; /* Kích thước chữ */
+            margin: 4px 2px; /* Khoảng cách xung quanh */
+            cursor: pointer; /* Đổi con trỏ khi di chuột */
+            border-radius: 12px; /* Bo tròn góc */
+            transition: background-color 0.3s; /* Hiệu ứng chuyển màu */
+        }
+
+        .btn:hover {
+            background-color: #45a049; /* Màu khi di chuột vào nút */
+        }
+    </style>
+</head>
+<body>
+    <button class="btn" onclick="compare(getNumber('Nhập a'), getNumber('Nhập b'))">Enter</button>
+
+    <script>
+        function getNumber(promptMessage) {
+            return parseInt(prompt(promptMessage));
+        }
+        function compare(a,b){
+            if(a>b){
+                alert('a lớn hơn b');
+            } else {
+                alert('a bé hơn b. tổng 2 số là '+(a+b));
+            }
+        }
+    </script>
+</body>
+</html>

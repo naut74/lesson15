@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #313030;
+    font-family: Arial, sans-serif;
+    }
+
+    .button-container {
+        text-align: center;
+    }
+
+    .fancy-button {
+        background-color: greenyellow;
+        color: white;
+        border: none;
+        padding: 15px 30px;
+        font-size: 16px;
+        font-weight: bold;
+        border-radius: 5px;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+        transition: color .4s ease;
+    }
+
+    .fancy-button::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 300%;
+        height: 300%;
+        background: rgba(255, 255, 255, .3);
+        border-radius: 50%;
+        transition: transform .5s ease;
+        transform: translate(-50%, -50%) scale();
+        z-index: 
+    }
+
+    .fancy-button:hover::before {
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    .fancy-button:hover {
+        color: rgb(150, 238, 16);
+    }
+
+    .fancy-button:focus {
+        outline: none;
+    }
+
+    </style>
+</head>
+<body>
+    <div class="button-container">
+        <button class="fancy-button" onclick="alertMessage();">Nhấn vào đây!</button>
+    </div>
+    <script>
+        function alertMessage(){
+            alert('Hello!');
+        }
+    </script>
+</body>
+</html>

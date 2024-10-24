@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star</title>
+</head>
+<body>
+    <p id="result"></p>
+    <script>
+        let inputStar=prompt('Enter star').toLowerCase();
+        let Star=["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+        let nameStar=["Ursa Minor", "Tarurus", "Cygnus", 'Lyra', "Aquila", "Ursa Major","Leo"]
+        function checkStar(){
+            let result='Star not found';
+            for(let i=0;i<Star.length;i++){
+                if (Star[i].toLowerCase()==inputStar){
+                    result='Name of '+inputStar+' is '+nameStar[i];   
+                    break;
+                }
+            }
+            document.getElementById('result').innerHTML=result;   
+        } 
+        checkStar();
+    </script>
+</body>
+</html>

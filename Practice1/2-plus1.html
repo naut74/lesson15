@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tăng giá trị</title>
+    <style>
+        body{
+            gap: 50;
+            margin: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Tăng giá trị</h2>
+    <p id="result"></p>
+    <script>
+        function increaseValue(number){
+            return number+1;
+        }
+        const inputnumber=parseInt(prompt('Nhập giá trị rồi tăng lên 1'));
+        const result=increaseValue(inputnumber);
+        document.getElementById('result').innerHTML=result;
+    </script>
+</body>
+</html>
