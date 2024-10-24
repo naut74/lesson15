@@ -1,0 +1,52 @@
+body {
+    gap: 10px;
+    margin: 50px;
+}
+.form-container {
+    background-color: rgb(219, 222, 222);
+    padding: 20px;
+}
+.inputNP {
+    height: 30px;
+    width: 400px;
+    border-radius: 5px;
+    padding-left: 10px;
+}
+
+table {
+    border-collapse:collapse ;    
+    width: 100%;
+}
+th,td {
+    padding: 10px;
+    text-align: left;
+}
+.col-1 {
+    width: 70% ;
+}
+.col-2, .col-3 {
+    width: 20%;
+}
+tr:nth-child(even) {
+    background-color: #ddd;
+}
+
+
+
+.btn {
+    background-color: #4CAF50; /* Màu nền */
+    border: none; /* Xóa viền */
+    color: white; /* Màu chữ */
+    padding: 10px 28px; /* Khoảng cách bên trong */
+    text-decoration: none; /* Xóa gạch chân */
+    display: inline-block; /* Định dạng kiểu khối */
+    font-size: 16px; /* Kích thước chữ */
+    margin: 4px 2px; /* Khoảng cách xung quanh */
+    cursor: pointer; /* Đổi con trỏ khi di chuột */
+    border-radius: 8px; /* Bo tròn góc */
+    transition: background-color 0.3s; /* Hiệu ứng chuyển màu */
+}
+
+.btn:hover {
+    background-color: #3b983f; /* Màu khi di chuột vào nút */
+}
