@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Square</title>
+</head>
+<body>
+    <p id="result"></p>
+    <script>
+        let inputnum=parseInt(prompt('Enter a'));
+        function square(num){
+            return num*num;
+        }
+        let result =square(inputnum);
+        document.getElementById('result').innerHTML='Square of '+inputnum+' is '+result;
+        
+    </script>
+</body>
+</html>

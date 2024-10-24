@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse Array</title>
+</head>
+<body>
+    <h1>Reverse Array</h1>
+    <button type="button" onclick="inputnumber();">Nhập 10 phần tử</button>
+    <p id="arr"></p>
+    <p id="result"></p>
+    <script>
+        function inputnumber(){
+            let result=[];
+            let result1=[];
+            for(let i=0; i<10;i++){
+                let nb=parseInt(prompt('Nhập phần tử '+(i+1)));
+                result.push(nb);
+                result1.unshift(nb);
+            }
+            document.getElementById('arr').innerHTML='10 phần tử bạn nhập là '+result.join('; ')
+            document.getElementById('result').innerHTML='10 phần tử đảo lại là '+result1.join('; ')
+        }
+    </script>
+    <p></p>
+</body>
+</html>

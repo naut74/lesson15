@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Position</title>
+</head>
+<body>
+    <h2>Change Position</h2>
+    <input type="number" id="input" placeholder="Enter number 1">
+    <input type="number" id="input1" placeholder="Enter number 2">
+    <button type="button" onclick="changePosition();">Change</button>
+    <p id="result"></p>
+    <script>
+        function changePosition(){
+            let num=document.getElementById('input').value;
+            let num1=document.getElementById('input1').value;
+            let temp='';
+            temp=num;
+            num=num1;
+            num1=temp;
+            let result=num+num1;
+            document.getElementById('result').innerHTML='Change Position: '+result;
+        }
+    </script>
+
+</body>
+</html>

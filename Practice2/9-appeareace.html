@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse Array</title>
+</head>
+<body>
+    <h1>Reverse Array</h1>
+    <button type="button" onclick="inputnumber();">Nhập 5 kí tự</button>
+    <button type="button" onclick="inputnumberAndCheck();">Nhập 1 kí tự và kiểm tra</button>
+    <p id="arr"></p>
+    <p id="result"></p>
+    <script>
+        let arr=[]
+        function inputnumber(){
+            for(let i=0; i<5;i++){
+                let nb=prompt('Nhập phần tử '+(i+1));
+                arr.push(nb);
+            }
+            document.getElementById('arr').innerHTML='5 phần tử bạn nhập là '+arr.join('; ')
+        }    
+        function inputnumberAndCheck(){
+            let count=0;
+            let result=false;
+            let char=prompt('Nhập 1 kí tự và kiểm tra xem kí tự có nằm trong mảng ban đầu không?')
+            for(let i=0;i<arr.length;i++){
+                if(arr[i]==char){
+                    count++;
+                    result=true;
+                }
+            }
+            result=result?'Kí tự '+char+' có xuất hiện '+count+' lần':'Kí tự '+char+' không xuất hiện ';
+            document.getElementById('result').innerHTML=result;
+        }
+        
+    </script>
+    <p></p>
+</body>
+</html>

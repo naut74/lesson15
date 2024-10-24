@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perimeter and Area of circle</title>
+    <style>
+        body{
+            margin-left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h3>Perimeter and Area of circle</h3>
+    <input type="number" id="radius" placeholder="Enter Radius">
+    <button type="button" onclick="calculate();">Calculate</button>
+    <p id="result"></p>
+    <p id="result1"></p>
+    <script>
+        function calculate(){
+            let r=parseFloat(document.getElementById('radius').value);
+            if(r>0){
+                let areaOfCircle=Math.PI*r*r;
+                let perimeterOfCircle=2*Math.PI*r;
+                document.getElementById('result').innerHTML='Perimeter of circle '+perimeterOfCircle.toFixed(3);
+                document.getElementById('result1').innerHTML='Area of circle '+areaOfCircle.toFixed(3);
+            } else{
+                document.getElementById('result').innerHTML='Invalid radius'
+                document.getElementById('result1').innerHTML='';          
+            }
+        }
+    </script>
+</body>
+</html>

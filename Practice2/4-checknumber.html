@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Character</title>
+</head>
+<body>
+    <h2>Check Character</h2>
+    <input type="text" id="input" placeholder="Enter anything">
+    <button type="button" onclick="check();">Check</button>
+    <p id="result"></p>
+    <script>
+        function check(){
+            let str=document.getElementById('input').value;
+            let result=true;
+            for(let i=0;i<str.length;i++){
+                if(isNaN(str[i])){
+                    result=false;
+                    break;
+                }
+            }
+            result=result?'true':'false'
+            document.getElementById('result').innerHTML=result;
+        }
+    </script>
+
+</body>
+</html>

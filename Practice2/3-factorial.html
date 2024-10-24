@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factorial</title>
+    <style>
+        body{
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <p id="result"></p>
+    <script>
+        let inputnum=parseInt(prompt('Enter a'));
+        function factorial(num){
+            if(num>0)
+                return num*factorial(num-1);
+            else if (num==0 || num==1) 
+                return 1;
+            else
+                return 'Invalid number';
+        }
+        let result =factorial(inputnum);
+        document.getElementById('result').innerHTML='Factorial of '+inputnum+' is '+result;
+        
+    </script>
+</body>
+</html>
