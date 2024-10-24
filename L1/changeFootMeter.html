@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convert between feet and meters</title>
+    <style>
+        body {
+            margin: 50px;
+            gap: 10;
+        }
+        .row{
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <h1>Convert between feet and meters</h1>
+    
+    <div class="row">
+        <div>
+            <span>Foot </span>
+            <input type="number" id="foot" oninput="footToMeter(this.value)" onchange="footToMeter(this.value)" placeholder="Enter foot">
+            <p id="result"></p>
+        </div>
+        <div>
+            <span>Meter </span>
+            <input type="number" id="meter" oninput="meterToFoot(this.value)" onchange="meterToFoot(this.value)" placeholder="Enter meter">
+            <p id="result1"></p>
+        </div>
+
+    </div>
+    <script>
+        function footToMeter(foot) {
+            let meter=foot*0.305;
+            document.getElementById('result').innerHTML = 'Meter: '+meter;
+        }
+        function meterToFoot(meter) {
+            let foot=meter*3.279;
+            document.getElementById('result1').innerHTML = 'Foot: '+foot;
+        }
+    </script>
+</body>
+</html>
