@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime</title>
+    <style>
+        body {
+            margin: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Prime</h1>
+    <input type="number" id="isPrime" oninput="isPrime(this.value)" onchange="isPrime(this.value)">
+    <p id="result"></p>
+    <script>
+        function isPrime(number) {
+            let result;
+            number = parseInt(number); 
+            if (isNaN(number) || number <= 1) {
+                result = 'is not Prime';
+            } else if (number === 2) {
+                result = 'is Prime';
+            } else if (number % 2 === 0) {
+                result = 'is not Prime';
+            } else {
+                let isPrimeFlag = true;
+                for (let i = 3; i <= Math.sqrt(number); i += 2) {
+                    if (number % i === 0) {
+                        isPrimeFlag = false;
+                        break;
+                    }
+                }
+                result = isPrimeFlag ? 'is Prime' : 'is not Prime';
+            }
+            document.getElementById('result').innerHTML = result;
+        }
+    </script>
+</body>
+</html>
